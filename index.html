@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="awesomeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="app/app.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="awesomeController" style="width: 300px; height: 300px; border: 3px solid red">
+      Scope 1
+      <br>
+      <button ng-click="sendMessage('hello from scope 1')">Send Message</button>
+    </div>
+    <br>
+    <div ng-controller="awesomeController2" style="width: 300px; height: 300px; border: 3px solid blue">
+      Scope 2
+    </div>
+  </body>
+</html>

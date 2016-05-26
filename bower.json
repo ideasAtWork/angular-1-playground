@@ -1,0 +1,24 @@
+{
+  "name": "Angular 1 Tutorial",
+  "authors": [
+    "Cassian Lup <cassi.lup@gmail.com>"
+  ],
+  "description": "",
+  "main": "app/app.js",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}
