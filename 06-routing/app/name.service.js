@@ -1,4 +1,7 @@
 angular.module('awesomeApp')
+.constant('APP_CONSTANTS', {
+  API_URL: "http://uinames.com/api/"
+})
 .factory('nameService', function($http, $log, APP_CONSTANTS) {
   var baseUrl = APP_CONSTANTS.API_URL;
   var names = [];

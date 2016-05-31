@@ -54,3 +54,7 @@ input[type="text"] {
   .clickable span:active {
     background-color: #eee;
   }
+
+.pale-red-background {
+  background-color: rgba(255, 0, 0, .1);
+}

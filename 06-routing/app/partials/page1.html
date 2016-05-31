@@ -1,0 +1,12 @@
+<div class="wrapper" ng-controller="firstController">
+  Page 1
+  <br>
+  <button class="button" ng-click="getName()">Get Name</button>
+  <div class="people-count">
+    {{names.length}} people so far.
+  </div>
+
+  <div class="person" ng-repeat="person in names track by $index">
+    {{person.name}} {{person.surname}} -- {{person.gender}} from {{person.region}}
+  </div>
+</div>
