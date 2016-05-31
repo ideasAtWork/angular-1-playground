@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="awesomeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../bower_components/angular/angular.js"></script>
+
+    <script src="app/app.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper" ng-controller="firstController">
+      Scope 1
+      <br>
+      <button class="button" ng-click="broadcastMessage()">Broadcast Message</button>
+      <br>
+      <button class="button" ng-click="emitMessage()">Emit Message</button>
+    </div>
+
+    <div class="wrapper" ng-controller="secondController">
+      Scope 2
+    </div>
+  </body>
+</html>

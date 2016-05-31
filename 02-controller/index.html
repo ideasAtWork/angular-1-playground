@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../bower_components/angular/angular.js"></script>
+
+    <script src="app/app.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="MyCtrl">
+
+      <input type="text" placeholder="Write in here to unleash the magic." ng-model="$root.myField">
+      <br>
+      {{$root.myField}}
+      <br>
+      Multiplied value: {{multiplyby2()}}
+    </div>
+  </body>
+</html>

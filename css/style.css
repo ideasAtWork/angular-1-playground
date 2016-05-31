@@ -1,10 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: white;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type="text"] {
+  padding: 3px;
+  width: 200px;
+}
+
 .wrapper {
   max-width: 300px;
   min-height: 300px;
   border: 3px dashed #007acd;
   margin: 10px;
   padding: 10px;
-  font-family: sans-serif;
 }
 
 .button {
@@ -31,3 +43,14 @@
 .person {
   padding: 5px 10px;
 }
+
+.clickable {
+  cursor: pointer;
+}
+  .clickable span:hover {
+    border-bottom: 1px solid gray;
+    margin-bottom: -1px;
+  }
+  .clickable span:active {
+    background-color: #eee;
+  }
