@@ -6,7 +6,7 @@
     {{names.length}} people so far.
   </div>
 
-  <div class="person" ng-repeat="person in names track by $index">
-    {{person.name}} {{person.surname}} -- {{person.gender}} from {{person.region}}
-  </div>
+  <button ng-if="isParentState()" ui-sref="state1.list({firstParam: 'text2'})">Show List</button>
+
+  <div ui-view></div>
 </div>

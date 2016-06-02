@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="awesomeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../bower_components/angular/angular.js"></script>
+
+    <!-- Main Scripts -->
+    <script src="app/app.js"></script>
+    <script src="app/constants.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/parent.controller.js"></script>
+    <script src="app/child.controller.js"></script>
+
+    <!-- Directives -->
+    <script src="app/myElement.directive.js"></script>
+
+    <!-- Services -->
+    <script src="app/name.service.js"></script>
+
+  </head>
+  <body>
+
+    <div class="wrapper" ng-controller="parentController">
+      Parent Controller
+      <br>
+      <br>
+      Parent info is:<br>
+      {{parentInformation}}
+      <br><hr><br>
+      <my-element info="parentInformation"></my-element>
+      <!-- <my-element send-message="sendMessageInParent(data)"></my-element> -->
+    </div>
+  </body>
+</html>
