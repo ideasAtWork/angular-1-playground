@@ -5,9 +5,9 @@ angular.module('awesomeApp')
     templateUrl: "app/partials/myElement.html",
     scope: {
       // ourDirectiveInfo: "@info",
-      ourDirectiveInfo: "=info",
+      // ourDirectiveInfo: "=info",
       // ourDirectiveInfo: "<info"
-      // sendMessageInDirective: "&sendMessage"
+      sendMessageInDirective: "&sendMessage"
     },
     link: function(scope, elem, attr) {
       scope.changeInfoInDirective = function() {

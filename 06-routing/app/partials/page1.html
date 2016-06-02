@@ -5,18 +5,8 @@
   <div class="people-count">
     {{names.length}} people so far.
   </div>
+<!-- ng-if="isParentState()"  -->
+  <button ng-click="goToList()">Show List</button>
 
-  <div ui-view></div>
+  <div ui-view="list"></div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <button ng-if="isParentState()" ui-sref="state1.list({firstParam: 'text2'})">Show List</button> -->
