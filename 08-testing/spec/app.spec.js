@@ -1,59 +1,46 @@
 'use strict';
 
-describe('our campaign', function() {
+describe('awesomeController', function() {
 
-  var x = 1,
-    $rootScope,
-    $controller,
-    $scope,
-    nameService;
+    var $controller,
+      $rootScope,
+      $scope,
+      nameService;
 
-  beforeEach(module('awesomeApp'));
+    beforeEach(module('awesomeApp'));
 
-  beforeEach(inject(function(_$controller_, $rootScope) {
-    $controller = _$controller_;
+    beforeEach(inject(function(_$controller_, _$rootScope_, _nameService_) {
 
-    $scope = $rootScope.$new();
-    // nameService = {
-    //   getNames: jasmine.createSpy()
-    // };
+      $controller = _$controller_;
+      $rootScope = _$rootScope_;
+      nameService = _nameService_;
 
-    nameService = jasmine.createSpyObj(['getNames']);
-  }));
+      $scope = $rootScope.$new();
 
-  describe('awesomeController', function() {
-    beforeEach(function() {
+      // nameService = jasmine.createSpyObj(['getNewName']);
+      nameService.getNewName = jasmine.createSpy();
+
       $controller('awesomeController', {
         $scope: $scope,
         nameService: nameService
       });
+    }));
+
+    it('should initialise the names array', function() {
+      expect($scope.names).not.toBeDefined();
     });
 
-    it('should invoke namesService.getName() when executing controller', function() {
-      expect(nameService.getNames).toHaveBeenCalled();
+    describe('getName', function() {
+      it('method should be defined', function() {
+        expect($scope.getName).toBeDefined();
+      });
+
+      it('to call nameService.getNewName', function() {
+        $scope.getName();
+
+        expect(nameService.getNewName).toHaveBeenCalled();
+      });
     });
-  });
-
-
-  beforeEach(function() {
-    x = 2;
-  });
-
-  describe('teste simple', function() {
-
-    afterEach(function() {
-      // console.log('hello from afterEach');
-    });
-
-    it('should work', function() {
-      // console.log('this is the first test');
-      expect(x).toBe(2);
-    });
-
-    it('1 to be 1', function() {
-      expect(1).toEqual(1);
-    });
-  });
 });
 
 
@@ -81,38 +68,60 @@ describe('our campaign', function() {
 
 
 
-
-
-
-
-
-
-// $scope = $rootScope.$new();
-
-
-// beforeEach(inject(function (_$httpBackend_, _$rootScope_, _$controller_) {
-//   $httpBackend = _$httpBackend_;
-//   $controller = _$controller_;
+// 'use strict';
 //
-//   spyOn($state, 'go').andReturn([]);
+// describe('our campaign', function() {
 //
-//   $scope = $rootScope.$new();
+//   var x = 1,
+//     $rootScope,
+//     $controller,
+//     $scope,
+//     nameService;
 //
-//   mockService = jasmine.createSpyObj('myMockService', ['doSomething', 'doSomethingElse']);
-//   mockService.doSomething.andReturn({ something: true });
+//   beforeEach(module('awesomeApp'));
 //
-//   mockControlPanelSelectionService = jasmine.createSpyObj('controlPanelSelectionService', ['getSelectionContext']);
-//   mockControlPanelSelectionService.getSelectionContext.andReturn($q.when({
-//     getSomething : function () {
-//       return false;
-//     }
-//   ));
+//   beforeEach(inject(function(_$controller_, $rootScope) {
+//     $controller = _$controller_;
 //
-//   mockFlexAPI = jasmine.createSpyObj("FlexAPI", ["getFlexApp", "flexAppName", "messaging", "navigation", "popup"]);
+//     $scope = $rootScope.$new();
+//     // nameService = {
+//     //   getNames: jasmine.createSpy()
+//     // };
 //
-//   deferredTranslation = $q.defer();
+//     nameService = jasmine.createSpyObj(['getNames']);
+//   }));
 //
-//   spyOn(_$translate_, 'spy').andCallFake(function () {
-//     return deferredTranslation.promise;
+//   describe('awesomeController', function() {
+//     beforeEach(function() {
+//       $controller('awesomeController', {
+//         $scope: $scope,
+//         nameService: nameService
+//       });
+//     });
+//
+//     it('should invoke namesService.getName() when executing controller', function() {
+//       expect(nameService.getNames).toHaveBeenCalled();
+//     });
 //   });
-// }));
+//
+//
+//   beforeEach(function() {
+//     x = 2;
+//   });
+//
+//   describe('teste simple', function() {
+//
+//     afterEach(function() {
+//       // console.log('hello from afterEach');
+//     });
+//
+//     it('should work', function() {
+//       // console.log('this is the first test');
+//       expect(x).toBe(2);
+//     });
+//
+//     it('1 to be 1', function() {
+//       expect(1).toEqual(1);
+//     });
+//   });
+// });
