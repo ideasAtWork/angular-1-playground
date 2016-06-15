@@ -1,3 +1,6 @@
 bower_components
 coverage/
 node_modules/
+typings/
+*.map
+09-angular2/app/*.js
