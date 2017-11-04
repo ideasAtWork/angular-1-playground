@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="awesomeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/nameService.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper" ng-controller="awesomeController">
+      Scope 1
+      <br>
+      <button class="button" ng-click="getName()">Get Name</button>
+      <div class="people-count">
+        {{names.length}} people so far.
+      </div>
+
+      <div class="person" ng-repeat="person in names track by $index">
+        {{person.name}} {{person.surname}} -- {{person.gender}} from {{person.region}}
+      </div>
+    </div>
+  </body>
+</html>
