@@ -1,6 +1,6 @@
 angular.module('awesomeApp', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {
-  //
+
   // For any unmatched url, redirect to /page1
   $urlRouterProvider.otherwise("/page1");
 

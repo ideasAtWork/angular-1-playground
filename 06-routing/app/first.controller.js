@@ -3,6 +3,8 @@ angular.module('awesomeApp')
 
   $log.log('current state', $state);
 
+  $scope.$state = $state;
+
   $scope.names = nameService.getNames();
 
   $scope.getName = function() {

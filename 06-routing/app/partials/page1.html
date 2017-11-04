@@ -5,8 +5,8 @@
   <div class="people-count">
     {{names.length}} people so far.
   </div>
-<!-- ng-if="isParentState()"  -->
-  <button ng-click="goToList()">Show List</button>
+
+  <button ng-if="$state.current.name !== 'state1.list'" ng-click="goToList()">Go To Nested</button>
 
   <div ui-view="list"></div>
 </div>
