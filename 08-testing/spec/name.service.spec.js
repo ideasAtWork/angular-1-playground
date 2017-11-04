@@ -1,6 +1,6 @@
 'use strict';
 
-xdescribe('basic common-sense functionality', function() {
+describe('basic common-sense functionality', function() {
   var myNumber;
 
   beforeEach(function() {

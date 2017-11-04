@@ -27,7 +27,7 @@ describe('awesomeController', function() {
     }));
 
     it('should initialise the names array', function() {
-      expect($scope.names).not.toBeDefined();
+      expect($scope.names).toBeDefined();
     });
 
     describe('getName', function() {
